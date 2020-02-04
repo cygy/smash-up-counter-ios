@@ -1,0 +1,50 @@
+/* Title of the dialog box to enter the player's name. */
+"playersScene.dialogBox.title.playerName" = "Nom du joueur";
+
+/* Label of the dialog box button OK. */
+"playersScene.dialogBox.button.ok" = "OK";
+
+/* Hint of the player's name. */
+"playersScene.playerView.hint" = "Personne";
+
+/* Label of the home scene button 'new game'. */
+"homeScene.button.newGame" = "Nouvelle partie";
+
+/* Label of the players scene button 'add player'. */
+"playersScene.button.addPlayer" = "Ajouter joueur";
+
+/* Label of the players scene button 'next'. */
+"playersScene.button.next" = "Suivant";
+
+/* Title of the players scene. */
+"playersScene.title" = "Joueurs";
+
+/* Label of the factions scene button 'back'. */
+"factionsScene.button.back" = "Retour";
+
+/* Label of the factions scene button 'next'. */
+"factionsScene.button.next" = "Suivant";
+
+/* Title of the factions scene. */
+"factionsScene.title" = "Factions";
+
+/* Label of the factions distribution scene button 'next player'. */
+"factionsDistributionScene.button.nextPlayer" = "Joueur suivant";
+
+/* Label of the factions distribution scene button 'start'. */
+"factionsDistributionScene.button.start" = "Jouer";
+
+/* Label of the game scene button 'end game'. */
+"gameScene.button.endGame" = "Fin de la partie";
+
+/* Title of the game scene. */
+"gameScene.title" = "Partie";
+
+/* Label of the end game scene button 'replay'. */
+"endGameScene.button.replay" = "Rejouer partie";
+
+/* Label of the end game scene button 'reset'. */
+"endGameScene.button.reset" = "Changer factions";
+
+/* Label of the end game scene button 'new game'. */
+"endGameScene.button.newGame" = "Nouvelle partie";

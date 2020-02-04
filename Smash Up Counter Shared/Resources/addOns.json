@@ -1,0 +1,342 @@
+[{
+ "id": 0,
+ "name": "Base",
+ "image": "expansion_0",
+ "isSelected": true,
+ "factions": [{
+              "id": 0,
+              "name": "Aliens",
+              "image": "faction_0",
+              "isSelected": true
+              },
+              {
+              "id": 1,
+              "name": "Dinosaures",
+              "image": "faction_1",
+              "isSelected": true
+              },
+              {
+              "id": 2,
+              "name": "Ninjas",
+              "image": "faction_2",
+              "isSelected": true
+              },
+              {
+              "id": 3,
+              "name": "Pirates",
+              "image": "faction_3",
+              "isSelected": true
+              },
+              {
+              "id": 4,
+              "name": "Robots",
+              "image": "faction_4",
+              "isSelected": true
+              },
+              {
+              "id": 5,
+              "name": "Petit Peuple",
+              "image": "faction_5",
+              "isSelected": true
+              },
+              {
+              "id": 6,
+              "name": "Sorciers",
+              "image": "faction_6",
+              "isSelected": true
+              },
+              {
+              "id": 7,
+              "name": "Zombies",
+              "image": "faction_7",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 1,
+ "name": "La Grosse Boîte pour Geek",
+ "image": "expansion_1",
+ "isSelected": true,
+ "factions": [{
+              "id": 8,
+              "name": "Geeks",
+              "image": "faction_8",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 2,
+ "name": "Cthulhu Fhtagn",
+ "image": "expansion_2",
+ "isSelected": true,
+ "factions": [{
+              "id": 9,
+              "name": "Serviteurs de Cthulhu",
+              "image": "faction_9",
+              "isSelected": true
+              },
+              {
+              "id": 10,
+              "name": "Innsmouth",
+              "image": "faction_10",
+              "isSelected": true
+              },
+              {
+              "id": 11,
+              "name": "Grands Anciens",
+              "image": "faction_11",
+              "isSelected": true
+              },
+              {
+              "id": 12,
+              "name": "Université Miskatonic",
+              "image": "faction_12",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 3,
+ "name": "Même pas Mort",
+ "image": "expansion_3",
+ "isSelected": true,
+ "factions": [{
+              "id": 13,
+              "name": "Plantes Carnivores",
+              "image": "faction_13",
+              "isSelected": true
+              },
+              {
+              "id": 14,
+              "name": "Steampunks",
+              "image": "faction_14",
+              "isSelected": true
+              },
+              {
+              "id": 15,
+              "name": "Fantômes",
+              "image": "faction_15",
+              "isSelected": true
+              },
+              {
+              "id": 16,
+              "name": "Cavalerie Ours",
+              "image": "faction_16",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 4,
+ "name": "Séries B",
+ "image": "expansion_4",
+ "isSelected": true,
+ "factions": [{
+              "id": 17,
+              "name": "Singes Cyborgs",
+              "image": "faction_17",
+              "isSelected": true
+              },
+              {
+              "id": 18,
+              "name": "Super Espions",
+              "image": "faction_18",
+              "isSelected": true
+              },
+              {
+              "id": 19,
+              "name": "Métamorphes",
+              "image": "faction_19",
+              "isSelected": true
+              },
+              {
+              "id": 20,
+              "name": "Voyageurs du Temps",
+              "image": "faction_20",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 5,
+ "name": "Monstres Sacrés",
+ "image": "expansion_5",
+ "isSelected": true,
+ "factions": [{
+              "id": 21,
+              "name": "Loups-Garous",
+              "image": "faction_21",
+              "isSelected": true
+              },
+              {
+              "id": 22,
+              "name": "Vampires",
+              "image": "faction_22",
+              "isSelected": true
+              },
+              {
+              "id": 23,
+              "name": "Savants Fous",
+              "image": "faction_23",
+              "isSelected": true
+              },
+              {
+              "id": 24,
+              "name": "Fourmis Géantes",
+              "image": "faction_24",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 6,
+ "name": "Vous l'aurez voulu !",
+ "image": "expansion_6",
+ "isSelected": true,
+ "factions": [{
+              "id": 25,
+              "name": "Dragons",
+              "image": "faction_25",
+              "isSelected": true
+              },
+              {
+              "id": 26,
+              "name": "Mythologie grecque",
+              "image": "faction_26",
+              "isSelected": true
+              },
+              {
+              "id": 27,
+              "name": "Requins",
+              "image": "faction_27",
+              "isSelected": true
+              },
+              {
+              "id": 28,
+              "name": "Super-héros",
+              "image": "faction_28",
+              "isSelected": true
+              },
+              {
+              "id": 29,
+              "name": "Tornades",
+              "image": "faction_29",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 7,
+ "name": "Trop Minions",
+ "image": "expansion_7",
+ "isSelected": true,
+ "factions": [{
+              "id": 30,
+              "name": "Fées",
+              "image": "faction_30",
+              "isSelected": true
+              },
+              {
+              "id": 31,
+              "name": "Poneys Magiques",
+              "image": "faction_31",
+              "isSelected": true
+              },
+              {
+              "id": 32,
+              "name": "Chatons",
+              "image": "faction_32",
+              "isSelected": true
+              },
+              {
+              "id": 33,
+              "name": "Princesses",
+              "image": "faction_33",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 8,
+ "name": "Ressemblances Fortuites",
+ "image": "expansion_8",
+ "isSelected": true,
+ "factions": [{
+              "id": 34,
+              "name": "Chevaliers des Étoiles",
+              "image": "faction_34",
+              "isSelected": true
+              },
+              {
+              "id": 35,
+              "name": "Changeformers",
+              "image": "faction_35",
+              "isSelected": true
+              },
+              {
+              "id": 36,
+              "name": "Squatteurs de Trône",
+              "image": "faction_36",
+              "isSelected": true
+              },
+              {
+              "id": 37,
+              "name": "Voyageurs de l'Espace",
+              "image": "faction_37",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 9,
+ "name": "Conflit de Générations",
+ "image": "expansion_9",
+ "isSelected": true,
+ "factions": [{
+              "id": 38,
+              "name": "Oursons",
+              "image": "faction_38",
+              "isSelected": true
+              },
+              {
+              "id": 39,
+              "name": "Rockstars",
+              "image": "faction_39",
+              "isSelected": true
+              },
+              {
+              "id": 40,
+              "name": "Explorateurs",
+              "image": "faction_40",
+              "isSelected": true
+              },
+              {
+              "id": 41,
+              "name": "Grands-mères",
+              "image": "faction_41",
+              "isSelected": true
+              }]
+ },
+ {
+ "id": 10,
+ "name": "Rois du Japon",
+ "image": "expansion_10",
+ "isSelected": true,
+ "factions": [{
+              "id": 42,
+              "name": "Petites Magiciennes",
+              "image": "faction_42",
+              "isSelected": true
+              },
+              {
+              "id": 43,
+              "name": "Super Combattants",
+              "image": "faction_43",
+              "isSelected": true
+              },
+              {
+              "id": 44,
+              "name": "Kaiju",
+              "image": "faction_44",
+              "isSelected": true
+              },
+              {
+              "id": 45,
+              "name": "Monstrapoches",
+              "image": "faction_45",
+              "isSelected": true
+              }]
+ }]

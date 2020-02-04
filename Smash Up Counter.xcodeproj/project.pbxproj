@@ -1,0 +1,953 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F10024B1206525A1008163C4 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10024B0206525A1008163C4 /* PlayerNode.swift */; };
+		F10024B3206535C3008163C4 /* Player.sks in Resources */ = {isa = PBXBuildFile; fileRef = F10024B2206535C3008163C4 /* Player.sks */; };
+		F10BBB0C206ED137005AC9BC /* Button.sks in Resources */ = {isa = PBXBuildFile; fileRef = F10BBB0B206ED137005AC9BC /* Button.sks */; };
+		F10BBB0E206ED1C8005AC9BC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10BBB0D206ED1C8005AC9BC /* Button.swift */; };
+		F10CCDCB2023C06E00029612 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CCDCA2023C06E00029612 /* MainViewController.swift */; };
+		F10DE29920582981008CF206 /* AddOnNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DE29820582981008CF206 /* AddOnNode.swift */; };
+		F11DEEE1207811F800854CF6 /* SKNode+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11DEEE0207811F800854CF6 /* SKNode+Button.swift */; };
+		F12F883720226FB5002955E3 /* addOns.json in Resources */ = {isa = PBXBuildFile; fileRef = F12F883620226FB5002955E3 /* addOns.json */; };
+		F13AF54C20741DC200924FB9 /* EndGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13AF54B20741DC200924FB9 /* EndGameCoordinator.swift */; };
+		F13AF54E20741E0B00924FB9 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13AF54D20741E0B00924FB9 /* EndGameScene.swift */; };
+		F13AF55020741E1600924FB9 /* EndGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13AF54F20741E1600924FB9 /* EndGameScene.sks */; };
+		F13AF552207427DE00924FB9 /* Factions.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13AF551207427DE00924FB9 /* Factions.xcassets */; };
+		F1458B5120651D330007C64A /* BigFactionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1458B5020651D330007C64A /* BigFactionNode.swift */; };
+		F1458B5320651F7C0007C64A /* BigFaction.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1458B5220651F7C0007C64A /* BigFaction.sks */; };
+		F15AF4C22029C1FF0069A83C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C12029C1FF0069A83C /* MainCoordinator.swift */; };
+		F15AF4C42029C5040069A83C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C32029C5040069A83C /* HomeCoordinator.swift */; };
+		F15AF4C8202A09510069A83C /* PlayersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C7202A09510069A83C /* PlayersCoordinator.swift */; };
+		F15AF4CA202A095D0069A83C /* FactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C9202A095D0069A83C /* FactionsCoordinator.swift */; };
+		F15AF4CC202A097F0069A83C /* FactionsDistributionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CB202A097F0069A83C /* FactionsDistributionCoordinator.swift */; };
+		F15AF4CE202A098C0069A83C /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CD202A098C0069A83C /* GameCoordinator.swift */; };
+		F15AF4D0202A09AC0069A83C /* PlayersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CF202A09AC0069A83C /* PlayersScene.swift */; };
+		F15AF4D2202A09CB0069A83C /* PlayersScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15AF4D1202A09CB0069A83C /* PlayersScene.sks */; };
+		F15AF4D4202A09E10069A83C /* FactionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4D3202A09E10069A83C /* FactionsScene.swift */; };
+		F15AF4D6202A09EF0069A83C /* FactionsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15AF4D5202A09EF0069A83C /* FactionsScene.sks */; };
+		F15AF4D8202A0A060069A83C /* FactionsDistributionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4D7202A0A060069A83C /* FactionsDistributionScene.swift */; };
+		F15AF4DA202A0A140069A83C /* FactionsDistributionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15AF4D9202A0A140069A83C /* FactionsDistributionScene.sks */; };
+		F15AF4DC202A0A200069A83C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4DB202A0A200069A83C /* GameScene.swift */; };
+		F15AF4DE202A0A290069A83C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15AF4DD202A0A290069A83C /* GameScene.sks */; };
+		F15AF4E0202A0C390069A83C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4DF202A0C390069A83C /* Scene.swift */; };
+		F15AF4E2202A5FAD0069A83C /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4E1202A5FAD0069A83C /* SceneCoordinator.swift */; };
+		F15F20F2206AE5DE00858361 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F20F1206AE5DE00858361 /* Images.xcassets */; };
+		F15F3DBB2059D2D9000EB8E1 /* AddOn.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15F3DBA2059D2D9000EB8E1 /* AddOn.sks */; };
+		F15F3DBD2059D32C000EB8E1 /* Faction.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15F3DBC2059D32C000EB8E1 /* Faction.sks */; };
+		F15F3DBF2059D5F5000EB8E1 /* FactionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F3DBE2059D5F5000EB8E1 /* FactionNode.swift */; };
+		F164F4AE20409DAA00B63413 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164F4AD20409DAA00B63413 /* ApplicationState.swift */; };
+		F164F4B020409DCD00B63413 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164F4AF20409DCD00B63413 /* Player.swift */; };
+		F164F4B220409DD500B63413 /* Faction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164F4B120409DD500B63413 /* Faction.swift */; };
+		F164F4B420409DE500B63413 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164F4B320409DE500B63413 /* AddOn.swift */; };
+		F164F4CD2040A4EF00B63413 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164F4CC2040A4EF00B63413 /* State.swift */; };
+		F1692C87204E004F004ED932 /* PlayerName.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1692C86204E004F004ED932 /* PlayerName.sks */; };
+		F1700E4A207AB29500C94225 /* PlayerNameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1700E49207AB29500C94225 /* PlayerNameNode.swift */; };
+		F18475DB20815E54003E6C18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F18475DD20815E54003E6C18 /* Localizable.strings */; };
+		F1936F0B206C331C0088AFDE /* Curse Casual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1936F0A206C331C0088AFDE /* Curse Casual.ttf */; };
+		F1936F0C206C331C0088AFDE /* Curse Casual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1936F0A206C331C0088AFDE /* Curse Casual.ttf */; };
+		F1936F0D206C331C0088AFDE /* Curse Casual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1936F0A206C331C0088AFDE /* Curse Casual.ttf */; };
+		F1936F10206C3E900088AFDE /* SKNode+Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1936F0F206C3E900088AFDE /* SKNode+Stroke.swift */; };
+		F1936F11206C3E900088AFDE /* SKNode+Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1936F0F206C3E900088AFDE /* SKNode+Stroke.swift */; };
+		F1936F12206C3E900088AFDE /* SKNode+Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1936F0F206C3E900088AFDE /* SKNode+Stroke.swift */; };
+		F19627AD2071671A0072CE8D /* Expansions.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19627AC2071671A0072CE8D /* Expansions.xcassets */; };
+		F1A3779023EA1CF7007B46C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EEFBFD201F855C00B0AA54 /* RxSwift.framework */; };
+		F1A3779323EA1D0F007B46C8 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A3778A23EA1CB7007B46C8 /* RxRelay.framework */; };
+		F1CC028720756D1400D4122F /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC028620756D1400D4122F /* Actions.swift */; };
+		F1E6A43D2004193900C55C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A43C2004193900C55C1B /* AppDelegate.swift */; };
+		F1E6A4422004193900C55C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4402004193900C55C1B /* Main.storyboard */; };
+		F1E6A4452004193900C55C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4432004193900C55C1B /* LaunchScreen.storyboard */; };
+		F1E6A44E2004193900C55C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A44D2004193900C55C1B /* AppDelegate.swift */; };
+		F1E6A4502004193900C55C1B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A44F2004193900C55C1B /* GameViewController.swift */; };
+		F1E6A4532004193900C55C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4512004193900C55C1B /* Main.storyboard */; };
+		F1E6A45C2004193900C55C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A45B2004193900C55C1B /* AppDelegate.swift */; };
+		F1E6A45E2004193900C55C1B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A45D2004193900C55C1B /* GameViewController.swift */; };
+		F1E6A4612004193900C55C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A45F2004193900C55C1B /* Main.storyboard */; };
+		F1E6A4662004193900C55C1B /* HomeScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4322004193900C55C1B /* HomeScene.sks */; };
+		F1E6A4672004193900C55C1B /* HomeScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4322004193900C55C1B /* HomeScene.sks */; };
+		F1E6A4682004193900C55C1B /* HomeScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4322004193900C55C1B /* HomeScene.sks */; };
+		F1E6A4692004193900C55C1B /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A4332004193900C55C1B /* HomeScene.swift */; };
+		F1E6A46A2004193900C55C1B /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A4332004193900C55C1B /* HomeScene.swift */; };
+		F1E6A46B2004193900C55C1B /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6A4332004193900C55C1B /* HomeScene.swift */; };
+		F1E6A46C2004193900C55C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4342004193900C55C1B /* Assets.xcassets */; };
+		F1E6A46D2004193900C55C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4342004193900C55C1B /* Assets.xcassets */; };
+		F1E6A46E2004193900C55C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E6A4342004193900C55C1B /* Assets.xcassets */; };
+		F1F6BC8A207FF21200896B96 /* explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1F6BC88207FF21200896B96 /* explode.sks */; };
+		F1F6BC8B207FF21200896B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F6BC89207FF21200896B96 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F10024B0206525A1008163C4 /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
+		F10024B2206535C3008163C4 /* Player.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Player.sks; sourceTree = "<group>"; };
+		F10BBB0B206ED137005AC9BC /* Button.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Button.sks; sourceTree = "<group>"; };
+		F10BBB0D206ED1C8005AC9BC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		F10CCDCA2023C06E00029612 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F10DE29820582981008CF206 /* AddOnNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnNode.swift; sourceTree = "<group>"; };
+		F11DEEE0207811F800854CF6 /* SKNode+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Button.swift"; sourceTree = "<group>"; };
+		F12F883620226FB5002955E3 /* addOns.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addOns.json; sourceTree = "<group>"; };
+		F13AF54B20741DC200924FB9 /* EndGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameCoordinator.swift; sourceTree = "<group>"; };
+		F13AF54D20741E0B00924FB9 /* EndGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
+		F13AF54F20741E1600924FB9 /* EndGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndGameScene.sks; sourceTree = "<group>"; };
+		F13AF551207427DE00924FB9 /* Factions.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Factions.xcassets; sourceTree = "<group>"; };
+		F1458B5020651D330007C64A /* BigFactionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigFactionNode.swift; sourceTree = "<group>"; };
+		F1458B5220651F7C0007C64A /* BigFaction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigFaction.sks; sourceTree = "<group>"; };
+		F15AF4C12029C1FF0069A83C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4C32029C5040069A83C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4C7202A09510069A83C /* PlayersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4C9202A095D0069A83C /* FactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4CB202A097F0069A83C /* FactionsDistributionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsDistributionCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4CD202A098C0069A83C /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4CF202A09AC0069A83C /* PlayersScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersScene.swift; sourceTree = "<group>"; };
+		F15AF4D1202A09CB0069A83C /* PlayersScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayersScene.sks; sourceTree = "<group>"; };
+		F15AF4D3202A09E10069A83C /* FactionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsScene.swift; sourceTree = "<group>"; };
+		F15AF4D5202A09EF0069A83C /* FactionsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FactionsScene.sks; sourceTree = "<group>"; };
+		F15AF4D7202A0A060069A83C /* FactionsDistributionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsDistributionScene.swift; sourceTree = "<group>"; };
+		F15AF4D9202A0A140069A83C /* FactionsDistributionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FactionsDistributionScene.sks; sourceTree = "<group>"; };
+		F15AF4DB202A0A200069A83C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F15AF4DD202A0A290069A83C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F15AF4DF202A0C390069A83C /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		F15AF4E1202A5FAD0069A83C /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		F15F20F1206AE5DE00858361 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Smash Up Counter Shared/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		F15F3DBA2059D2D9000EB8E1 /* AddOn.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AddOn.sks; sourceTree = "<group>"; };
+		F15F3DBC2059D32C000EB8E1 /* Faction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Faction.sks; sourceTree = "<group>"; };
+		F15F3DBE2059D5F5000EB8E1 /* FactionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionNode.swift; sourceTree = "<group>"; };
+		F164F4AD20409DAA00B63413 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		F164F4AF20409DCD00B63413 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F164F4B120409DD500B63413 /* Faction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faction.swift; sourceTree = "<group>"; };
+		F164F4B320409DE500B63413 /* AddOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
+		F164F4CC2040A4EF00B63413 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		F1692C86204E004F004ED932 /* PlayerName.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerName.sks; sourceTree = "<group>"; };
+		F1700E49207AB29500C94225 /* PlayerNameNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameNode.swift; sourceTree = "<group>"; };
+		F18475D520815DA6003E6C18 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		F18475D620815DA7003E6C18 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F18475D720815DA7003E6C18 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		F18475D820815DA8003E6C18 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		F18475DC20815E54003E6C18 /* en */ = {isa = PBXFileReference; fileEncoding = 2483028224; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F18475DE20815E56003E6C18 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F1936F0A206C331C0088AFDE /* Curse Casual.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Curse Casual.ttf"; sourceTree = "<group>"; };
+		F1936F0F206C3E900088AFDE /* SKNode+Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Stroke.swift"; sourceTree = "<group>"; };
+		F19627AC2071671A0072CE8D /* Expansions.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Expansions.xcassets; sourceTree = "<group>"; };
+		F1A3778A23EA1CB7007B46C8 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F1CC028620756D1400D4122F /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		F1E6A4322004193900C55C1B /* HomeScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeScene.sks; sourceTree = "<group>"; };
+		F1E6A4332004193900C55C1B /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
+		F1E6A4342004193900C55C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1E6A4392004193900C55C1B /* Smash Up Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smash Up Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E6A43C2004193900C55C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1E6A4412004193900C55C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1E6A4442004193900C55C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1E6A4462004193900C55C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E6A44B2004193900C55C1B /* Smash Up Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smash Up Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E6A44D2004193900C55C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1E6A44F2004193900C55C1B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F1E6A4522004193900C55C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1E6A4542004193900C55C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E6A4592004193900C55C1B /* Smash Up Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smash Up Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E6A45B2004193900C55C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1E6A45D2004193900C55C1B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F1E6A4602004193900C55C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1E6A4622004193900C55C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1EEFBFD201F855C00B0AA54 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F1F6BC88207FF21200896B96 /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
+		F1F6BC89207FF21200896B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1E6A4362004193900C55C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1A3779323EA1D0F007B46C8 /* RxRelay.framework in Frameworks */,
+				F1A3779023EA1CF7007B46C8 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1E6A4482004193900C55C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1E6A4562004193900C55C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F12F883520226AE8002955E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1936F0A206C331C0088AFDE /* Curse Casual.ttf */,
+				F12F883620226FB5002955E3 /* addOns.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F15AF4BF2029C1250069A83C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1936F0E206C3E660088AFDE /* Extensions */,
+				F15AF4C02029C1CA0069A83C /* Coordinators */,
+				F1EEFBF8201F6AB200B0AA54 /* Scenes */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F15AF4C02029C1CA0069A83C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF4C12029C1FF0069A83C /* MainCoordinator.swift */,
+				F15AF4E1202A5FAD0069A83C /* SceneCoordinator.swift */,
+				F15AF4C32029C5040069A83C /* HomeCoordinator.swift */,
+				F15AF4C7202A09510069A83C /* PlayersCoordinator.swift */,
+				F15AF4C9202A095D0069A83C /* FactionsCoordinator.swift */,
+				F15AF4CB202A097F0069A83C /* FactionsDistributionCoordinator.swift */,
+				F15AF4CD202A098C0069A83C /* GameCoordinator.swift */,
+				F13AF54B20741DC200924FB9 /* EndGameCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F164F4AC20409D9300B63413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F164F4AD20409DAA00B63413 /* ApplicationState.swift */,
+				F164F4CC2040A4EF00B63413 /* State.swift */,
+				F164F4AF20409DCD00B63413 /* Player.swift */,
+				F164F4B320409DE500B63413 /* AddOn.swift */,
+				F164F4B120409DD500B63413 /* Faction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1692C85204E001F004ED932 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F1692C86204E004F004ED932 /* PlayerName.sks */,
+				F15F3DBA2059D2D9000EB8E1 /* AddOn.sks */,
+				F15F3DBC2059D32C000EB8E1 /* Faction.sks */,
+				F1458B5220651F7C0007C64A /* BigFaction.sks */,
+				F10024B2206535C3008163C4 /* Player.sks */,
+				F10BBB0B206ED137005AC9BC /* Button.sks */,
+				F1700E49207AB29500C94225 /* PlayerNameNode.swift */,
+				F10DE29820582981008CF206 /* AddOnNode.swift */,
+				F15F3DBE2059D5F5000EB8E1 /* FactionNode.swift */,
+				F1458B5020651D330007C64A /* BigFactionNode.swift */,
+				F10024B0206525A1008163C4 /* PlayerNode.swift */,
+				F10BBB0D206ED1C8005AC9BC /* Button.swift */,
+				F1F6BC88207FF21200896B96 /* explode.sks */,
+				F1F6BC89207FF21200896B96 /* Assets.xcassets */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		F1936F0E206C3E660088AFDE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1936F0F206C3E900088AFDE /* SKNode+Stroke.swift */,
+				F11DEEE0207811F800854CF6 /* SKNode+Button.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1CC028520756D0500D4122F /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				F1CC028620756D1400D4122F /* Actions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		F1E6A42B2004193800C55C1B = {
+			isa = PBXGroup;
+			children = (
+				F1E6A4302004193900C55C1B /* Smash Up Counter Shared */,
+				F1E6A43B2004193900C55C1B /* Smash Up Counter iOS */,
+				F1E6A44C2004193900C55C1B /* Smash Up Counter tvOS */,
+				F1E6A45A2004193900C55C1B /* Smash Up Counter macOS */,
+				F1E6A43A2004193900C55C1B /* Products */,
+				F1EEFBFB201F855C00B0AA54 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F1E6A4302004193900C55C1B /* Smash Up Counter Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F164F4AC20409D9300B63413 /* Model */,
+				F15AF4BF2029C1250069A83C /* Views */,
+				F12F883520226AE8002955E3 /* Resources */,
+				F1E6A4342004193900C55C1B /* Assets.xcassets */,
+				F15F20F1206AE5DE00858361 /* Images.xcassets */,
+				F19627AC2071671A0072CE8D /* Expansions.xcassets */,
+				F13AF551207427DE00924FB9 /* Factions.xcassets */,
+				F18475DD20815E54003E6C18 /* Localizable.strings */,
+			);
+			path = "Smash Up Counter Shared";
+			sourceTree = "<group>";
+		};
+		F1E6A43A2004193900C55C1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1E6A4392004193900C55C1B /* Smash Up Counter.app */,
+				F1E6A44B2004193900C55C1B /* Smash Up Counter.app */,
+				F1E6A4592004193900C55C1B /* Smash Up Counter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1E6A43B2004193900C55C1B /* Smash Up Counter iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F1E6A43C2004193900C55C1B /* AppDelegate.swift */,
+				F10CCDCA2023C06E00029612 /* MainViewController.swift */,
+				F1E6A4402004193900C55C1B /* Main.storyboard */,
+				F1E6A4432004193900C55C1B /* LaunchScreen.storyboard */,
+				F1E6A4462004193900C55C1B /* Info.plist */,
+			);
+			path = "Smash Up Counter iOS";
+			sourceTree = "<group>";
+		};
+		F1E6A44C2004193900C55C1B /* Smash Up Counter tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				F1E6A44D2004193900C55C1B /* AppDelegate.swift */,
+				F1E6A44F2004193900C55C1B /* GameViewController.swift */,
+				F1E6A4512004193900C55C1B /* Main.storyboard */,
+				F1E6A4542004193900C55C1B /* Info.plist */,
+			);
+			path = "Smash Up Counter tvOS";
+			sourceTree = "<group>";
+		};
+		F1E6A45A2004193900C55C1B /* Smash Up Counter macOS */ = {
+			isa = PBXGroup;
+			children = (
+				F1E6A45B2004193900C55C1B /* AppDelegate.swift */,
+				F1E6A45D2004193900C55C1B /* GameViewController.swift */,
+				F1E6A45F2004193900C55C1B /* Main.storyboard */,
+				F1E6A4622004193900C55C1B /* Info.plist */,
+			);
+			path = "Smash Up Counter macOS";
+			sourceTree = "<group>";
+		};
+		F1EEFBF8201F6AB200B0AA54 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F1CC028520756D0500D4122F /* Actions */,
+				F1692C85204E001F004ED932 /* Nodes */,
+				F15AF4DF202A0C390069A83C /* Scene.swift */,
+				F1E6A4332004193900C55C1B /* HomeScene.swift */,
+				F1E6A4322004193900C55C1B /* HomeScene.sks */,
+				F15AF4CF202A09AC0069A83C /* PlayersScene.swift */,
+				F15AF4D1202A09CB0069A83C /* PlayersScene.sks */,
+				F15AF4D3202A09E10069A83C /* FactionsScene.swift */,
+				F15AF4D5202A09EF0069A83C /* FactionsScene.sks */,
+				F15AF4D7202A0A060069A83C /* FactionsDistributionScene.swift */,
+				F15AF4D9202A0A140069A83C /* FactionsDistributionScene.sks */,
+				F15AF4DB202A0A200069A83C /* GameScene.swift */,
+				F15AF4DD202A0A290069A83C /* GameScene.sks */,
+				F13AF54D20741E0B00924FB9 /* EndGameScene.swift */,
+				F13AF54F20741E1600924FB9 /* EndGameScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F1EEFBFB201F855C00B0AA54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1A3778A23EA1CB7007B46C8 /* RxRelay.framework */,
+				F1EEFBFD201F855C00B0AA54 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1E6A4382004193900C55C1B /* Smash Up Counter iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1E6A4712004193900C55C1B /* Build configuration list for PBXNativeTarget "Smash Up Counter iOS" */;
+			buildPhases = (
+				F1E6A4352004193900C55C1B /* Sources */,
+				F1E6A4362004193900C55C1B /* Frameworks */,
+				F1E6A4372004193900C55C1B /* Resources */,
+				F1EEFC0C201F865400B0AA54 /* ShellScript */,
+				F1EEFC0D201F86D800B0AA54 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smash Up Counter iOS";
+			productName = "Smash Up Counter iOS";
+			productReference = F1E6A4392004193900C55C1B /* Smash Up Counter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1E6A44A2004193900C55C1B /* Smash Up Counter tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1E6A4742004193900C55C1B /* Build configuration list for PBXNativeTarget "Smash Up Counter tvOS" */;
+			buildPhases = (
+				F1E6A4472004193900C55C1B /* Sources */,
+				F1E6A4482004193900C55C1B /* Frameworks */,
+				F1E6A4492004193900C55C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smash Up Counter tvOS";
+			productName = "Smash Up Counter tvOS";
+			productReference = F1E6A44B2004193900C55C1B /* Smash Up Counter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1E6A4582004193900C55C1B /* Smash Up Counter macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1E6A4772004193900C55C1B /* Build configuration list for PBXNativeTarget "Smash Up Counter macOS" */;
+			buildPhases = (
+				F1E6A4552004193900C55C1B /* Sources */,
+				F1E6A4562004193900C55C1B /* Frameworks */,
+				F1E6A4572004193900C55C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smash Up Counter macOS";
+			productName = "Smash Up Counter macOS";
+			productReference = F1E6A4592004193900C55C1B /* Smash Up Counter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1E6A42C2004193800C55C1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Cyril GY";
+				TargetAttributes = {
+					F1E6A4382004193900C55C1B = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1130;
+						ProvisioningStyle = Automatic;
+					};
+					F1E6A44A2004193900C55C1B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F1E6A4582004193900C55C1B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F1E6A42F2004193800C55C1B /* Build configuration list for PBXProject "Smash Up Counter" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+			);
+			mainGroup = F1E6A42B2004193800C55C1B;
+			productRefGroup = F1E6A43A2004193900C55C1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1E6A4382004193900C55C1B /* Smash Up Counter iOS */,
+				F1E6A44A2004193900C55C1B /* Smash Up Counter tvOS */,
+				F1E6A4582004193900C55C1B /* Smash Up Counter macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1E6A4372004193900C55C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E6A4662004193900C55C1B /* HomeScene.sks in Resources */,
+				F15F20F2206AE5DE00858361 /* Images.xcassets in Resources */,
+				F18475DB20815E54003E6C18 /* Localizable.strings in Resources */,
+				F1F6BC8B207FF21200896B96 /* Assets.xcassets in Resources */,
+				F1F6BC8A207FF21200896B96 /* explode.sks in Resources */,
+				F15AF4DA202A0A140069A83C /* FactionsDistributionScene.sks in Resources */,
+				F15F3DBD2059D32C000EB8E1 /* Faction.sks in Resources */,
+				F1E6A4422004193900C55C1B /* Main.storyboard in Resources */,
+				F10BBB0C206ED137005AC9BC /* Button.sks in Resources */,
+				F19627AD2071671A0072CE8D /* Expansions.xcassets in Resources */,
+				F1458B5320651F7C0007C64A /* BigFaction.sks in Resources */,
+				F13AF552207427DE00924FB9 /* Factions.xcassets in Resources */,
+				F12F883720226FB5002955E3 /* addOns.json in Resources */,
+				F1E6A4452004193900C55C1B /* LaunchScreen.storyboard in Resources */,
+				F15F3DBB2059D2D9000EB8E1 /* AddOn.sks in Resources */,
+				F15AF4DE202A0A290069A83C /* GameScene.sks in Resources */,
+				F15AF4D6202A09EF0069A83C /* FactionsScene.sks in Resources */,
+				F1692C87204E004F004ED932 /* PlayerName.sks in Resources */,
+				F1936F0B206C331C0088AFDE /* Curse Casual.ttf in Resources */,
+				F15AF4D2202A09CB0069A83C /* PlayersScene.sks in Resources */,
+				F1E6A46C2004193900C55C1B /* Assets.xcassets in Resources */,
+				F13AF55020741E1600924FB9 /* EndGameScene.sks in Resources */,
+				F10024B3206535C3008163C4 /* Player.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1E6A4492004193900C55C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E6A4532004193900C55C1B /* Main.storyboard in Resources */,
+				F1936F0C206C331C0088AFDE /* Curse Casual.ttf in Resources */,
+				F1E6A4672004193900C55C1B /* HomeScene.sks in Resources */,
+				F1E6A46D2004193900C55C1B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1E6A4572004193900C55C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E6A4612004193900C55C1B /* Main.storyboard in Resources */,
+				F1936F0D206C331C0088AFDE /* Curse Casual.ttf in Resources */,
+				F1E6A4682004193900C55C1B /* HomeScene.sks in Resources */,
+				F1E6A46E2004193900C55C1B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F1EEFC0C201F865400B0AA54 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		F1EEFC0D201F86D800B0AA54 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1E6A4352004193900C55C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E6A4692004193900C55C1B /* HomeScene.swift in Sources */,
+				F13AF54E20741E0B00924FB9 /* EndGameScene.swift in Sources */,
+				F15AF4CE202A098C0069A83C /* GameCoordinator.swift in Sources */,
+				F15AF4E0202A0C390069A83C /* Scene.swift in Sources */,
+				F15AF4C42029C5040069A83C /* HomeCoordinator.swift in Sources */,
+				F164F4B420409DE500B63413 /* AddOn.swift in Sources */,
+				F15AF4C8202A09510069A83C /* PlayersCoordinator.swift in Sources */,
+				F11DEEE1207811F800854CF6 /* SKNode+Button.swift in Sources */,
+				F10BBB0E206ED1C8005AC9BC /* Button.swift in Sources */,
+				F15AF4E2202A5FAD0069A83C /* SceneCoordinator.swift in Sources */,
+				F15AF4CA202A095D0069A83C /* FactionsCoordinator.swift in Sources */,
+				F164F4CD2040A4EF00B63413 /* State.swift in Sources */,
+				F15AF4C22029C1FF0069A83C /* MainCoordinator.swift in Sources */,
+				F164F4B020409DCD00B63413 /* Player.swift in Sources */,
+				F10024B1206525A1008163C4 /* PlayerNode.swift in Sources */,
+				F1CC028720756D1400D4122F /* Actions.swift in Sources */,
+				F15AF4DC202A0A200069A83C /* GameScene.swift in Sources */,
+				F1458B5120651D330007C64A /* BigFactionNode.swift in Sources */,
+				F10CCDCB2023C06E00029612 /* MainViewController.swift in Sources */,
+				F15AF4D4202A09E10069A83C /* FactionsScene.swift in Sources */,
+				F15AF4D0202A09AC0069A83C /* PlayersScene.swift in Sources */,
+				F13AF54C20741DC200924FB9 /* EndGameCoordinator.swift in Sources */,
+				F164F4B220409DD500B63413 /* Faction.swift in Sources */,
+				F10DE29920582981008CF206 /* AddOnNode.swift in Sources */,
+				F15AF4CC202A097F0069A83C /* FactionsDistributionCoordinator.swift in Sources */,
+				F164F4AE20409DAA00B63413 /* ApplicationState.swift in Sources */,
+				F1E6A43D2004193900C55C1B /* AppDelegate.swift in Sources */,
+				F1700E4A207AB29500C94225 /* PlayerNameNode.swift in Sources */,
+				F15AF4D8202A0A060069A83C /* FactionsDistributionScene.swift in Sources */,
+				F1936F10206C3E900088AFDE /* SKNode+Stroke.swift in Sources */,
+				F15F3DBF2059D5F5000EB8E1 /* FactionNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1E6A4472004193900C55C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E6A46A2004193900C55C1B /* HomeScene.swift in Sources */,
+				F1E6A4502004193900C55C1B /* GameViewController.swift in Sources */,
+				F1936F11206C3E900088AFDE /* SKNode+Stroke.swift in Sources */,
+				F1E6A44E2004193900C55C1B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1E6A4552004193900C55C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E6A46B2004193900C55C1B /* HomeScene.swift in Sources */,
+				F1E6A45E2004193900C55C1B /* GameViewController.swift in Sources */,
+				F1936F12206C3E900088AFDE /* SKNode+Stroke.swift in Sources */,
+				F1E6A45C2004193900C55C1B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F18475DD20815E54003E6C18 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F18475DC20815E54003E6C18 /* en */,
+				F18475DE20815E56003E6C18 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F1E6A4402004193900C55C1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1E6A4412004193900C55C1B /* Base */,
+				F18475D520815DA6003E6C18 /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1E6A4432004193900C55C1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1E6A4442004193900C55C1B /* Base */,
+				F18475D620815DA7003E6C18 /* fr */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F1E6A4512004193900C55C1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1E6A4522004193900C55C1B /* Base */,
+				F18475D720815DA7003E6C18 /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1E6A45F2004193900C55C1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1E6A4602004193900C55C1B /* Base */,
+				F18475D820815DA8003E6C18 /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1E6A46F2004193900C55C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1E6A4702004193900C55C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		F1E6A4722004193900C55C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A9N5RU9AXL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Smash Up Counter iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gy.cyril.Smash-Up-Counter";
+				PRODUCT_NAME = "Smash Up Counter";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1E6A4732004193900C55C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A9N5RU9AXL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Smash Up Counter iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gy.cyril.Smash-Up-Counter";
+				PRODUCT_NAME = "Smash Up Counter";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1E6A4752004193900C55C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "tvOS LaunchImage";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A9N5RU9AXL;
+				INFOPLIST_FILE = "Smash Up Counter tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gy.cyril.Smash-Up-Counter";
+				PRODUCT_NAME = "Smash Up Counter";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		F1E6A4762004193900C55C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "tvOS LaunchImage";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A9N5RU9AXL;
+				INFOPLIST_FILE = "Smash Up Counter tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gy.cyril.Smash-Up-Counter";
+				PRODUCT_NAME = "Smash Up Counter";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1E6A4782004193900C55C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A9N5RU9AXL;
+				INFOPLIST_FILE = "Smash Up Counter macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gy.cyril.Smash-Up-Counter";
+				PRODUCT_NAME = "Smash Up Counter";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		F1E6A4792004193900C55C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A9N5RU9AXL;
+				INFOPLIST_FILE = "Smash Up Counter macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gy.cyril.Smash-Up-Counter";
+				PRODUCT_NAME = "Smash Up Counter";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1E6A42F2004193800C55C1B /* Build configuration list for PBXProject "Smash Up Counter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1E6A46F2004193900C55C1B /* Debug */,
+				F1E6A4702004193900C55C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1E6A4712004193900C55C1B /* Build configuration list for PBXNativeTarget "Smash Up Counter iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1E6A4722004193900C55C1B /* Debug */,
+				F1E6A4732004193900C55C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1E6A4742004193900C55C1B /* Build configuration list for PBXNativeTarget "Smash Up Counter tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1E6A4752004193900C55C1B /* Debug */,
+				F1E6A4762004193900C55C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1E6A4772004193900C55C1B /* Build configuration list for PBXNativeTarget "Smash Up Counter macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1E6A4782004193900C55C1B /* Debug */,
+				F1E6A4792004193900C55C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1E6A42C2004193800C55C1B /* Project object */;
+}
