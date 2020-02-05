@@ -1,5 +1,5 @@
 //
-//  FactionsCoordinator.swift
+//  FactionsSceneController.swift
 //  Smash Up Counter iOS
 //
 //  Created by Cyril on 06/02/2018.
@@ -7,24 +7,29 @@
 //
 
 import SpriteKit
-import RxSwift
 
+/*
+ The class FactionsSceneController manages the scene to add/remove factions to the game.
+ It is also responsible to provide the scene the add-ons and the factions.
+ 
+ This controller observes the ApplicationState singleton's addOns property to update its scene accordingly.
+ */
 
-// MARK: - Protocol (FactionsCoordinatorDelegate)
+// MARK: - Protocol (FactionsSceneControllerDelegate)
 
-protocol FactionsCoordinatorDelegate: class {
-    func nextStep(from coordinator: FactionsCoordinator)
-    func previousStep(from coordinator: FactionsCoordinator)
+protocol FactionsSceneControllerDelegate: class {
+    func nextStep(from controller: FactionsSceneController)
+    func previousStep(from controller: FactionsSceneController)
 }
 
 
 // MARK: - Definition
 
-class FactionsCoordinator: SceneCoordinator<FactionsScene> {
+class FactionsSceneController: SceneController<FactionsScene> {
     
     // MARK: - Properties
     
-    weak var delegate: FactionsCoordinatorDelegate?
+    weak var delegate: FactionsSceneControllerDelegate?
     
     fileprivate var selectedAddOnIndex: Int?
     
@@ -88,7 +93,7 @@ class FactionsCoordinator: SceneCoordinator<FactionsScene> {
 
 // MARK: - Extension (FactionsSceneDelegate)
 
-extension FactionsCoordinator: FactionsSceneDelegate {
+extension FactionsSceneController: FactionsSceneDelegate {
     func nextStep(from scene: FactionsScene) {
         scene.exit { [unowned self] in
             self.delegate?.nextStep(from: self)
@@ -121,7 +126,7 @@ extension FactionsCoordinator: FactionsSceneDelegate {
 
 // MARK: - Extension (FactionsSceneSourceDelegate)
 
-extension FactionsCoordinator: FactionsSceneSourceDelegate {
+extension FactionsSceneController: FactionsSceneSourceDelegate {
     func addOn(at index: Int) -> AddOn? {
         let addOns = ApplicationState.instance.addOns.value
         guard index >= 0 && index < addOns.count else {

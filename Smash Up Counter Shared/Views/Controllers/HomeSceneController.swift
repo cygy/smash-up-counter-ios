@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  HomeSceneController.swift
 //  Smash Up Counter iOS
 //
 //  Created by Cyril on 06/02/2018.
@@ -7,23 +7,29 @@
 //
 
 import SpriteKit
-import ReactiveReSwift
 
+/*
+ The class HomeSceneController manages the first screen of the application, the welcome screen.
+ This screen is displayed while the initial data is initialized. Once it is, the scene displays
+ a button to prepare a new game.
+ 
+ This controller observes the ApplicationState singleton's state property to update its scene accordingly.
+ */
 
-// MARK: - Protocol (HomeCoordinatorDelegate)
+// MARK: - Protocol (HomeSceneControllerDelegate)
 
-protocol HomeCoordinatorDelegate: class {
-    func nextStep(from coordinator: HomeCoordinator)
+protocol HomeSceneControllerDelegate: class {
+    func nextStep(from controller: HomeSceneController)
 }
 
 
 // MARK: - Definition
 
-class HomeCoordinator: SceneCoordinator<HomeScene> {
+class HomeSceneController: SceneController<HomeScene> {
     
     // MARK: - Properties
     
-    weak var delegate: HomeCoordinatorDelegate?
+    weak var delegate: HomeSceneControllerDelegate?
     
     
     // MARK: - Life cycle
@@ -63,7 +69,7 @@ class HomeCoordinator: SceneCoordinator<HomeScene> {
 
 // MARK: - Extension (HomeSceneDelegate)
 
-extension HomeCoordinator: HomeSceneDelegate {
+extension HomeSceneController: HomeSceneDelegate {
     func nextStep(from scene: HomeScene) {
         scene.exit { [unowned self] in
             self.delegate?.nextStep(from: self)

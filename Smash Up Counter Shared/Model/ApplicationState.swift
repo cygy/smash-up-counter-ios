@@ -10,6 +10,18 @@ import Foundation
 import Dispatch
 import RxRelay
 
+/*
+ The class ApplicationState manages the state and the data (the players and the available add-ons) of the entire application.
+ 
+ The singleton pattern is used to limit the occurences of objects from this class to one. This singleton is accessible
+ from anywhere into the application.
+ 
+ Each property of this class is an Observable. Then every controller can subscribe to these observable properties and update
+ its view if needed.
+ 
+ This class is composed of multiple extensions, each of these extensions provide methods concerning the management of its properties.
+ Its properties must not be changed directtly, but the use of the methods are encouraged.
+ */
 
 // MARK: - Definition
 
@@ -48,6 +60,8 @@ class ApplicationState {
 
 extension ApplicationState {
     
+    // Add a player with this name to the game.
+    // A player is added if the maximum number of players is not reachedand if this player does not exist yet.
     func addPlayer(name: String) {
         guard self.players.value.count < ApplicationState.numberMaxOfPlayers && !self.players.value.contains(where: { $0.name == name }) else {
             return
@@ -60,11 +74,13 @@ extension ApplicationState {
         self.players.accept(players)
     }
     
+    // Remove a player with this name from the game.
     func removePlayer(name: String) {
         let players = self.players.value.filter { $0.name != name }
         self.players.accept(players)
     }
        
+    // The score of a player with this name is incremented by 1.
     func increment(score points: Int, forPlayer name: String) {
         let players = self.players.value.map { (p) -> Player in
             guard p.name == name else {
@@ -75,7 +91,9 @@ extension ApplicationState {
         }
         self.players.accept(players)
     }
-       
+
+    // The score of a player with this name is decremented by 1.
+    // The score can not be lower than 0.
     func decrement(score points: Int, forPlayer name: String) {
         let players = self.players.value.map { (p) -> Player in
             guard p.name == name else {
@@ -94,18 +112,21 @@ extension ApplicationState {
 
 extension ApplicationState {
     
+    // Select an add-on to add its factions to the list.
+    // The players will play with factions from this list.
     func select(addOn addOnId: Int) {
         let addOns = self.update(addOn: addOnId, fromAddOns: self.addOns.value, isSelected: true)
         self.addOns.accept(addOns)
     }
     
+    // Unselect an add-on to remove its factions from the list.
+    // The players will play with factions from this list.
     func unselect(addOn addOnId: Int) {
         let addOns = self.update(addOn: addOnId, fromAddOns: self.addOns.value, isSelected: false)
         self.addOns.accept(addOns)
     }
     
-    // Private method
-    
+    // Private method to update an add-on and its faction.
     private func update(addOn addOnId: Int, fromAddOns addOns: [AddOn], isSelected selected: Bool) -> [AddOn] {
         return addOns.map { (a) -> AddOn in
             guard a.id == addOnId else {
@@ -124,19 +145,21 @@ extension ApplicationState {
 
 extension ApplicationState {
     
+    // Select a faction from an add-on to add it to the list.
+    // The players will play with factions from this list.
     func select(faction factionId: Int, fromAddOn addOnId: Int) {
         let addOns = self.update(faction: factionId, fromAddOn: addOnId, andFromAddOns: self.addOns.value, isSelected: true)
         self.addOns.accept(addOns)
     }
     
+    // Unelect a faction from an add-on to remove it from the list.
+    // The players will play with factions from this list.
     func unselect(faction factionId: Int, fromAddOn addOnId: Int) {
         let addOns = self.update(faction: factionId, fromAddOn: addOnId, andFromAddOns: self.addOns.value, isSelected: false)
         self.addOns.accept(addOns)
     }
     
-    
-    // Private method
-    
+    // Private method to update a faction.
     private func update(faction factionId: Int, fromAddOn addOnId: Int, andFromAddOns addOns: [AddOn], isSelected selected: Bool) -> [AddOn] {
         return addOns.map { (a) -> AddOn in
             guard a.id == addOnId else {
@@ -160,9 +183,12 @@ extension ApplicationState {
 // MARK: - Managing application state
 
 extension ApplicationState {
+    
+    // Initialize the data of the application: load the add-ons and the factions from a stored json file in a background thread.
+    // The state of the application is set to .initializing and is updated to .ready when all the data are up-to-date.
     func initialize() {
         guard self.addOns.value.count == 0 else {
-            self.state.accept(.ready)
+            self.initializationDone()
             return
         }
         
@@ -182,28 +208,35 @@ extension ApplicationState {
             }
             
             DispatchQueue.main.async { [unowned self] in
-                self.initializationDone(addOns: addOns)
+                self.addOns.accept(addOns)
+                self.initializationDone()
             }
         }
     }
     
-    func initializationDone(addOns: [AddOn]) {
-        self.addOns.accept(addOns)
+    // Update the state of the application to .ready: the data are ready.
+    func initializationDone() {
         self.state.accept(.ready)
     }
     
+    // Reset the score and the factions of the existing players for the next game.
+    // Update the state of the application to the choice of the players.
     func setUpPlayers() {
         let players = self.players.value.map { Player(name: $0.name, points: 0, factions: [Faction]()) }
         self.players.accept(players)
         self.state.accept(.settingUpPlayers)
     }
     
+    // Reset the score and the factions of the existing players for the next game.
+    // Update the state of the application to the choice of the factions.
     func setUpFactions() {
         let players = self.players.value.map { Player(name: $0.name, points: 0, factions: [Faction]()) }
         self.players.accept(players)
         self.state.accept(.settingUpFactions)
     }
     
+    // The selected factions are distributed randomly to the players.
+    // Update the state of the application to the reveal of the factions.
     func distributeFactions() {
         var selectedFactions: [Faction] = self.addOns.value.filter{ $0.isSelected }.flatMap { $0.factions }.filter{ $0.isSelected }
         
@@ -228,25 +261,33 @@ extension ApplicationState {
         self.state.accept(.factionsDistributed)
     }
     
+    // Update the state of the application to the playing state.
     func startGame() {
         self.state.accept(.playing)
     }
     
+    // Update the state of the application to the end state with the winner.
     func endGame() {
         let winner = self.players.value.max(by: { $0.points < $1.points })
         self.state.accept(.endGame(winner: winner))
     }
     
+    // Start a new game.
+    // Update the state of the application to the choice of the players.
     func newGame() {
         self.setUpPlayers()
     }
     
+    // Replay the game with the same players and the same factions.
+    // Update the state of the application to the playing state.
     func replayGame() {
         let players = self.players.value.map { Player(name: $0.name, points: 0, factions: $0.factions) }
         self.players.accept(players)
         self.state.accept(.playing)
     }
     
+    // Replay the game with the same players.
+    // Update the state of the application to the choice of the factions.
     func resetGame() {
         self.setUpFactions()
     }

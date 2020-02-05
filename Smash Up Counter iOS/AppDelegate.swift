@@ -13,18 +13,21 @@ import SpriteKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var coordinator: MainCoordinator?
+    var coordinator: ApplicationCoordinator?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        guard let viewController = window?.rootViewController else {
+        // Ensure that the view controller and its view defined in the storyboard are suitable for the application.
+        guard let viewController = window?.rootViewController, let view = viewController.view as? SKView else {
             abort()
         }
         
-        coordinator = MainCoordinator(withView: viewController.view as! SKView, andViewController: viewController)
+        // The main coordinator drives the behaviour of the application.
+        // Starting the main coordinator now displays the initial view.
+        coordinator = ApplicationCoordinator(withView: view, andViewController: viewController)
         coordinator?.start()
         
+        // The initial state and data of the application are initialized here.
         ApplicationState.instance.initialize()
         
         return true

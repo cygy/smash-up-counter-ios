@@ -8,6 +8,18 @@
 
 import SpriteKit
 
+/*
+ The class Scene defines common behaviours for the SKScene objects of the application.
+ Each scene has a title (containing in a node).
+ 
+ When a scene enters or exits, its nodes are animated (moved in or moved out from the edges of the screen). These animations are defined
+ by overriding the methods enter(withCompletion completion: (() -> Void)? = nil) and exit(withCompletion completion: (() -> Void)? = nil).
+
+ The method setUp() can be overriden in order to update the nodes of the scene before it enters.
+ 
+ The closure setUpCompletion can be defined by the controller to update the nodes once the setup is done.
+ The closure enterCompletion can be defined by the controller to update the nodes once the scene is entered (after the enter animations).
+ */
 
 // MARK: - Definition
 
@@ -22,7 +34,10 @@ class Scene: SKScene {
     
     // MARK: - Handlers
     
+    // To be defined by the controller to update the nodes once the setup is done.
     var setUpCompletion: (() -> Void)? = nil
+    
+    // To be defined by the controller to update the nodes once the scene is entered (after the enter animations).
     var enterCompletion: (() -> Void)? = nil
     
     
@@ -32,13 +47,19 @@ class Scene: SKScene {
         return Scene()
     }
     
+    // To override in order to update the nodes of the scene before it enters.
+    // i.e. update the title of the scene accordingly the data passed by the controller.
     func setUp() {
     }
     
+    // To override in order to define the animations of the nodes when this scene enters.
+    // i.e. use the method moveNodes(fromTheTop topNodes: [SKNode?]?, fromTheBottom bottomNodes: [SKNode?]?, fromTheLeft leftNodes: [SKNode?]?, fromTheRight rightNodes: [SKNode?]?, animated: Bool, withCompletion completion: (() -> Void)? = nil)
     func enter(withCompletion completion: (() -> Void)? = nil) {
         completion?()
     }
     
+    // To override in order to define the animations of the nodes when this scene exits.
+    // i.e. use the method moveNodes(toTheTop topNodes: [SKNode?]?, toTheBottom bottomNodes: [SKNode?]?, toTheLeft leftNodes: [SKNode?]?, toTheRight rightNodes: [SKNode?]?, animated: Bool, withCompletion completion: (() -> Void)? = nil)
     func exit(withCompletion completion: (() -> Void)? = nil) {
         completion?()
     }

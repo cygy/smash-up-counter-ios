@@ -8,6 +8,9 @@
 
 import SpriteKit
 
+/*
+ This extension is a shorthand to access to a button into a node.
+ */
 
 // MARK: - Extension
 

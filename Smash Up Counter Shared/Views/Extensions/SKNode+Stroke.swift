@@ -8,6 +8,9 @@
 
 import SpriteKit
 
+/*
+ This extension allows to apply a stroke to a SKLabelNode.
+ */
 
 // MARK: - Extension
 

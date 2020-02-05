@@ -1,5 +1,5 @@
 //
-//  PlayersCoordinator.swift
+//  PlayersSceneController.swift
 //  Smash Up Counter iOS
 //
 //  Created by Cyril on 06/02/2018.
@@ -7,23 +7,27 @@
 //
 
 import SpriteKit
-import ReactiveReSwift
 
+/*
+ The class PlayersSceneController manages the scene to add/remove players to the game
+ 
+ This controller observes the ApplicationState singleton's players property to update its scene accordingly.
+ */
 
-// MARK: - Protocol (PlayersCoordinatorDelegate)
+// MARK: - Protocol (PlayersSceneControllerDelegate)
 
-protocol PlayersCoordinatorDelegate: class {
-    func nextStep(from coordinator: PlayersCoordinator)
+protocol PlayersSceneControllerDelegate: class {
+    func nextStep(from controller: PlayersSceneController)
 }
 
 
 // MARK: - Definition
 
-class PlayersCoordinator: SceneCoordinator<PlayersScene> {
+class PlayersSceneController: SceneController<PlayersScene> {
     
     // MARK: - Properties
     
-    weak var delegate: PlayersCoordinatorDelegate?
+    weak var delegate: PlayersSceneControllerDelegate?
     
     
     // MARK: - Life cycle
@@ -63,7 +67,7 @@ class PlayersCoordinator: SceneCoordinator<PlayersScene> {
 
 // MARK: - Extension (PlayersSceneDelegate)
 
-extension PlayersCoordinator: PlayersSceneDelegate {
+extension PlayersSceneController: PlayersSceneDelegate {
     func nextStep(from scene: PlayersScene) {
         scene.exit { [unowned self] in
             self.delegate?.nextStep(from: self)

@@ -1,5 +1,5 @@
 //
-//  GameCoordinator.swift
+//  GameSceneController.swift
 //  Smash Up Counter iOS
 //
 //  Created by Cyril on 06/02/2018.
@@ -7,23 +7,26 @@
 //
 
 import SpriteKit
-import RxSwift
 
+/*
+ The class GameSceneController presents the points of all the players.
+ Each player can increment or decrement its points.
+ */
 
-// MARK: - Protocol (GameCoordinatorDelegate)
+// MARK: - Protocol (GameSceneControllerDelegate)
 
-protocol GameCoordinatorDelegate: class {
-    func endGame(from coordinator: GameCoordinator)
+protocol GameSceneControllerDelegate: class {
+    func endGame(from controller: GameSceneController)
 }
 
 
 // MARK: - Definition
 
-class GameCoordinator: SceneCoordinator<GameScene> {
+class GameSceneController: SceneController<GameScene> {
     
     // MARK: - Properties
     
-    weak var delegate: GameCoordinatorDelegate?
+    weak var delegate: GameSceneControllerDelegate?
     
     
     // MARK: - Life cycle
@@ -54,7 +57,7 @@ class GameCoordinator: SceneCoordinator<GameScene> {
 
 // MARK: - Extension (GameSceneDelegate)
 
-extension GameCoordinator: GameSceneDelegate {
+extension GameSceneController: GameSceneDelegate {
     func endGame(from scene: GameScene) {
         scene.exit { [unowned self] in
             self.delegate?.endGame(from: self)

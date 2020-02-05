@@ -1,5 +1,5 @@
 //
-//  FactionsDistributionCoordinator.swift
+//  FactionsDistributionSceneController.swift
 //  Smash Up Counter iOS
 //
 //  Created by Cyril on 06/02/2018.
@@ -7,23 +7,26 @@
 //
 
 import SpriteKit
-import ReactiveReSwift
 
+/*
+ The class FactionsDistributionSceneController is only responsible to present the factions
+ randomly distributed to the players.
+ */
 
-// MARK: - Protocol (FactionsDistributionCoordinatorDelegate)
+// MARK: - Protocol (FactionsDistributionSceneControllerDelegate)
 
-protocol FactionsDistributionCoordinatorDelegate: class {
-    func nextStep(from coordinator: FactionsDistributionCoordinator)
+protocol FactionsDistributionSceneControllerDelegate: class {
+    func nextStep(from controller: FactionsDistributionSceneController)
 }
 
 
 // MARK: - Definition
 
-class FactionsDistributionCoordinator: SceneCoordinator<FactionsDistributionScene> {
+class FactionsDistributionSceneController: SceneController<FactionsDistributionScene> {
     
     // MARK: - Properties
     
-    weak var delegate: FactionsDistributionCoordinatorDelegate?
+    weak var delegate: FactionsDistributionSceneControllerDelegate?
     
     
     // MARK: - Life cycle
@@ -42,7 +45,7 @@ class FactionsDistributionCoordinator: SceneCoordinator<FactionsDistributionScen
 
 // MARK: - Extension (FactionsDistributionSceneDelegate)
 
-extension FactionsDistributionCoordinator: FactionsDistributionSceneDelegate {
+extension FactionsDistributionSceneController: FactionsDistributionSceneDelegate {
     func nextStep(from scene: FactionsDistributionScene) {
         scene.exit { [unowned self] in
             self.delegate?.nextStep(from: self)

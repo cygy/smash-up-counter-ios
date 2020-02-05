@@ -9,6 +9,10 @@
 import Foundation
 import SpriteKit
 
+/*
+ This extension defines new SKAction methods for the nodes.
+ These actions are defined in order to have a common behaviour of the nodes during the application life cycle.
+ */
 
 // MARK: - Extension (new actions)
 

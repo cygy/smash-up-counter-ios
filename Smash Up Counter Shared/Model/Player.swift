@@ -6,6 +6,10 @@
 //  Copyright © 2018 Cyril GY. All rights reserved.
 //
 
+/*
+ This class describes a player.
+ A player is uniquely created by its name, has a score (greater or equal to 0), and a list of factions to play with.
+ */
 
 // MARK: - Definition
 

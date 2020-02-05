@@ -6,6 +6,11 @@
 //  Copyright © 2018 Cyril GY. All rights reserved.
 //
 
+/*
+ This class describes an add-on.
+ An add-on is uniquely created by its identifier, has a name, an image and a set of factions.
+ An add-on and its factions can be selected or not to play with.
+ */
 
 // MARK: - Definition
 

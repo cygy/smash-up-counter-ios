@@ -15,18 +15,18 @@
 		F10DE29920582981008CF206 /* AddOnNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DE29820582981008CF206 /* AddOnNode.swift */; };
 		F11DEEE1207811F800854CF6 /* SKNode+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11DEEE0207811F800854CF6 /* SKNode+Button.swift */; };
 		F12F883720226FB5002955E3 /* addOns.json in Resources */ = {isa = PBXBuildFile; fileRef = F12F883620226FB5002955E3 /* addOns.json */; };
-		F13AF54C20741DC200924FB9 /* EndGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13AF54B20741DC200924FB9 /* EndGameCoordinator.swift */; };
+		F13AF54C20741DC200924FB9 /* EndGameSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13AF54B20741DC200924FB9 /* EndGameSceneController.swift */; };
 		F13AF54E20741E0B00924FB9 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13AF54D20741E0B00924FB9 /* EndGameScene.swift */; };
 		F13AF55020741E1600924FB9 /* EndGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13AF54F20741E1600924FB9 /* EndGameScene.sks */; };
 		F13AF552207427DE00924FB9 /* Factions.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13AF551207427DE00924FB9 /* Factions.xcassets */; };
 		F1458B5120651D330007C64A /* BigFactionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1458B5020651D330007C64A /* BigFactionNode.swift */; };
 		F1458B5320651F7C0007C64A /* BigFaction.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1458B5220651F7C0007C64A /* BigFaction.sks */; };
-		F15AF4C22029C1FF0069A83C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C12029C1FF0069A83C /* MainCoordinator.swift */; };
-		F15AF4C42029C5040069A83C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C32029C5040069A83C /* HomeCoordinator.swift */; };
-		F15AF4C8202A09510069A83C /* PlayersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C7202A09510069A83C /* PlayersCoordinator.swift */; };
-		F15AF4CA202A095D0069A83C /* FactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C9202A095D0069A83C /* FactionsCoordinator.swift */; };
-		F15AF4CC202A097F0069A83C /* FactionsDistributionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CB202A097F0069A83C /* FactionsDistributionCoordinator.swift */; };
-		F15AF4CE202A098C0069A83C /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CD202A098C0069A83C /* GameCoordinator.swift */; };
+		F15AF4C22029C1FF0069A83C /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C12029C1FF0069A83C /* ApplicationCoordinator.swift */; };
+		F15AF4C42029C5040069A83C /* HomeSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C32029C5040069A83C /* HomeSceneController.swift */; };
+		F15AF4C8202A09510069A83C /* PlayersSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C7202A09510069A83C /* PlayersSceneController.swift */; };
+		F15AF4CA202A095D0069A83C /* FactionsSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4C9202A095D0069A83C /* FactionsSceneController.swift */; };
+		F15AF4CC202A097F0069A83C /* FactionsDistributionSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CB202A097F0069A83C /* FactionsDistributionSceneController.swift */; };
+		F15AF4CE202A098C0069A83C /* GameSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CD202A098C0069A83C /* GameSceneController.swift */; };
 		F15AF4D0202A09AC0069A83C /* PlayersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4CF202A09AC0069A83C /* PlayersScene.swift */; };
 		F15AF4D2202A09CB0069A83C /* PlayersScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15AF4D1202A09CB0069A83C /* PlayersScene.sks */; };
 		F15AF4D4202A09E10069A83C /* FactionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4D3202A09E10069A83C /* FactionsScene.swift */; };
@@ -36,7 +36,7 @@
 		F15AF4DC202A0A200069A83C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4DB202A0A200069A83C /* GameScene.swift */; };
 		F15AF4DE202A0A290069A83C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15AF4DD202A0A290069A83C /* GameScene.sks */; };
 		F15AF4E0202A0C390069A83C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4DF202A0C390069A83C /* Scene.swift */; };
-		F15AF4E2202A5FAD0069A83C /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4E1202A5FAD0069A83C /* SceneCoordinator.swift */; };
+		F15AF4E2202A5FAD0069A83C /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF4E1202A5FAD0069A83C /* SceneController.swift */; };
 		F15F20F2206AE5DE00858361 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F20F1206AE5DE00858361 /* Images.xcassets */; };
 		F15F3DBB2059D2D9000EB8E1 /* AddOn.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15F3DBA2059D2D9000EB8E1 /* AddOn.sks */; };
 		F15F3DBD2059D32C000EB8E1 /* Faction.sks in Resources */ = {isa = PBXBuildFile; fileRef = F15F3DBC2059D32C000EB8E1 /* Faction.sks */; };
@@ -90,18 +90,18 @@
 		F10DE29820582981008CF206 /* AddOnNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnNode.swift; sourceTree = "<group>"; };
 		F11DEEE0207811F800854CF6 /* SKNode+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Button.swift"; sourceTree = "<group>"; };
 		F12F883620226FB5002955E3 /* addOns.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addOns.json; sourceTree = "<group>"; };
-		F13AF54B20741DC200924FB9 /* EndGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameCoordinator.swift; sourceTree = "<group>"; };
+		F13AF54B20741DC200924FB9 /* EndGameSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameSceneController.swift; sourceTree = "<group>"; };
 		F13AF54D20741E0B00924FB9 /* EndGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
 		F13AF54F20741E1600924FB9 /* EndGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndGameScene.sks; sourceTree = "<group>"; };
 		F13AF551207427DE00924FB9 /* Factions.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Factions.xcassets; sourceTree = "<group>"; };
 		F1458B5020651D330007C64A /* BigFactionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigFactionNode.swift; sourceTree = "<group>"; };
 		F1458B5220651F7C0007C64A /* BigFaction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigFaction.sks; sourceTree = "<group>"; };
-		F15AF4C12029C1FF0069A83C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		F15AF4C32029C5040069A83C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		F15AF4C7202A09510069A83C /* PlayersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersCoordinator.swift; sourceTree = "<group>"; };
-		F15AF4C9202A095D0069A83C /* FactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsCoordinator.swift; sourceTree = "<group>"; };
-		F15AF4CB202A097F0069A83C /* FactionsDistributionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsDistributionCoordinator.swift; sourceTree = "<group>"; };
-		F15AF4CD202A098C0069A83C /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4C12029C1FF0069A83C /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4C32029C5040069A83C /* HomeSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneController.swift; sourceTree = "<group>"; };
+		F15AF4C7202A09510069A83C /* PlayersSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersSceneController.swift; sourceTree = "<group>"; };
+		F15AF4C9202A095D0069A83C /* FactionsSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsSceneController.swift; sourceTree = "<group>"; };
+		F15AF4CB202A097F0069A83C /* FactionsDistributionSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsDistributionSceneController.swift; sourceTree = "<group>"; };
+		F15AF4CD202A098C0069A83C /* GameSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneController.swift; sourceTree = "<group>"; };
 		F15AF4CF202A09AC0069A83C /* PlayersScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersScene.swift; sourceTree = "<group>"; };
 		F15AF4D1202A09CB0069A83C /* PlayersScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayersScene.sks; sourceTree = "<group>"; };
 		F15AF4D3202A09E10069A83C /* FactionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionsScene.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		F15AF4DB202A0A200069A83C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F15AF4DD202A0A290069A83C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F15AF4DF202A0C390069A83C /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		F15AF4E1202A5FAD0069A83C /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		F15AF4E1202A5FAD0069A83C /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		F15F20F1206AE5DE00858361 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Smash Up Counter Shared/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		F15F3DBA2059D2D9000EB8E1 /* AddOn.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AddOn.sks; sourceTree = "<group>"; };
 		F15F3DBC2059D32C000EB8E1 /* Faction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Faction.sks; sourceTree = "<group>"; };
@@ -184,6 +184,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F101E38323EB11B70059D680 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF4E1202A5FAD0069A83C /* SceneController.swift */,
+				F15AF4C32029C5040069A83C /* HomeSceneController.swift */,
+				F15AF4C7202A09510069A83C /* PlayersSceneController.swift */,
+				F15AF4C9202A095D0069A83C /* FactionsSceneController.swift */,
+				F15AF4CB202A097F0069A83C /* FactionsDistributionSceneController.swift */,
+				F15AF4CD202A098C0069A83C /* GameSceneController.swift */,
+				F13AF54B20741DC200924FB9 /* EndGameSceneController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F12F883520226AE8002955E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,9 +210,11 @@
 		F15AF4BF2029C1250069A83C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F1936F0E206C3E660088AFDE /* Extensions */,
-				F15AF4C02029C1CA0069A83C /* Coordinators */,
+				F101E38323EB11B70059D680 /* Controllers */,
 				F1EEFBF8201F6AB200B0AA54 /* Scenes */,
+				F1936F0E206C3E660088AFDE /* Extensions */,
+				F1CC028520756D0500D4122F /* Actions */,
+				F1692C85204E001F004ED932 /* Nodes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,14 +222,7 @@
 		F15AF4C02029C1CA0069A83C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				F15AF4C12029C1FF0069A83C /* MainCoordinator.swift */,
-				F15AF4E1202A5FAD0069A83C /* SceneCoordinator.swift */,
-				F15AF4C32029C5040069A83C /* HomeCoordinator.swift */,
-				F15AF4C7202A09510069A83C /* PlayersCoordinator.swift */,
-				F15AF4C9202A095D0069A83C /* FactionsCoordinator.swift */,
-				F15AF4CB202A097F0069A83C /* FactionsDistributionCoordinator.swift */,
-				F15AF4CD202A098C0069A83C /* GameCoordinator.swift */,
-				F13AF54B20741DC200924FB9 /* EndGameCoordinator.swift */,
+				F15AF4C12029C1FF0069A83C /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -233,18 +242,18 @@
 		F1692C85204E001F004ED932 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				F1692C86204E004F004ED932 /* PlayerName.sks */,
-				F15F3DBA2059D2D9000EB8E1 /* AddOn.sks */,
-				F15F3DBC2059D32C000EB8E1 /* Faction.sks */,
-				F1458B5220651F7C0007C64A /* BigFaction.sks */,
-				F10024B2206535C3008163C4 /* Player.sks */,
-				F10BBB0B206ED137005AC9BC /* Button.sks */,
 				F1700E49207AB29500C94225 /* PlayerNameNode.swift */,
+				F1692C86204E004F004ED932 /* PlayerName.sks */,
 				F10DE29820582981008CF206 /* AddOnNode.swift */,
+				F15F3DBA2059D2D9000EB8E1 /* AddOn.sks */,
 				F15F3DBE2059D5F5000EB8E1 /* FactionNode.swift */,
+				F15F3DBC2059D32C000EB8E1 /* Faction.sks */,
 				F1458B5020651D330007C64A /* BigFactionNode.swift */,
+				F1458B5220651F7C0007C64A /* BigFaction.sks */,
 				F10024B0206525A1008163C4 /* PlayerNode.swift */,
+				F10024B2206535C3008163C4 /* Player.sks */,
 				F10BBB0D206ED1C8005AC9BC /* Button.swift */,
+				F10BBB0B206ED137005AC9BC /* Button.sks */,
 				F1F6BC88207FF21200896B96 /* explode.sks */,
 				F1F6BC89207FF21200896B96 /* Assets.xcassets */,
 			);
@@ -284,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				F164F4AC20409D9300B63413 /* Model */,
+				F15AF4C02029C1CA0069A83C /* Coordinators */,
 				F15AF4BF2029C1250069A83C /* Views */,
 				F12F883520226AE8002955E3 /* Resources */,
 				F1E6A4342004193900C55C1B /* Assets.xcassets */,
@@ -342,8 +352,6 @@
 		F1EEFBF8201F6AB200B0AA54 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F1CC028520756D0500D4122F /* Actions */,
-				F1692C85204E001F004ED932 /* Nodes */,
 				F15AF4DF202A0C390069A83C /* Scene.swift */,
 				F1E6A4332004193900C55C1B /* HomeScene.swift */,
 				F1E6A4322004193900C55C1B /* HomeScene.sks */,
@@ -567,17 +575,17 @@
 			files = (
 				F1E6A4692004193900C55C1B /* HomeScene.swift in Sources */,
 				F13AF54E20741E0B00924FB9 /* EndGameScene.swift in Sources */,
-				F15AF4CE202A098C0069A83C /* GameCoordinator.swift in Sources */,
+				F15AF4CE202A098C0069A83C /* GameSceneController.swift in Sources */,
 				F15AF4E0202A0C390069A83C /* Scene.swift in Sources */,
-				F15AF4C42029C5040069A83C /* HomeCoordinator.swift in Sources */,
+				F15AF4C42029C5040069A83C /* HomeSceneController.swift in Sources */,
 				F164F4B420409DE500B63413 /* AddOn.swift in Sources */,
-				F15AF4C8202A09510069A83C /* PlayersCoordinator.swift in Sources */,
+				F15AF4C8202A09510069A83C /* PlayersSceneController.swift in Sources */,
 				F11DEEE1207811F800854CF6 /* SKNode+Button.swift in Sources */,
 				F10BBB0E206ED1C8005AC9BC /* Button.swift in Sources */,
-				F15AF4E2202A5FAD0069A83C /* SceneCoordinator.swift in Sources */,
-				F15AF4CA202A095D0069A83C /* FactionsCoordinator.swift in Sources */,
+				F15AF4E2202A5FAD0069A83C /* SceneController.swift in Sources */,
+				F15AF4CA202A095D0069A83C /* FactionsSceneController.swift in Sources */,
 				F164F4CD2040A4EF00B63413 /* State.swift in Sources */,
-				F15AF4C22029C1FF0069A83C /* MainCoordinator.swift in Sources */,
+				F15AF4C22029C1FF0069A83C /* ApplicationCoordinator.swift in Sources */,
 				F164F4B020409DCD00B63413 /* Player.swift in Sources */,
 				F10024B1206525A1008163C4 /* PlayerNode.swift in Sources */,
 				F1CC028720756D1400D4122F /* Actions.swift in Sources */,
@@ -586,10 +594,10 @@
 				F10CCDCB2023C06E00029612 /* MainViewController.swift in Sources */,
 				F15AF4D4202A09E10069A83C /* FactionsScene.swift in Sources */,
 				F15AF4D0202A09AC0069A83C /* PlayersScene.swift in Sources */,
-				F13AF54C20741DC200924FB9 /* EndGameCoordinator.swift in Sources */,
+				F13AF54C20741DC200924FB9 /* EndGameSceneController.swift in Sources */,
 				F164F4B220409DD500B63413 /* Faction.swift in Sources */,
 				F10DE29920582981008CF206 /* AddOnNode.swift in Sources */,
-				F15AF4CC202A097F0069A83C /* FactionsDistributionCoordinator.swift in Sources */,
+				F15AF4CC202A097F0069A83C /* FactionsDistributionSceneController.swift in Sources */,
 				F164F4AE20409DAA00B63413 /* ApplicationState.swift in Sources */,
 				F1E6A43D2004193900C55C1B /* AppDelegate.swift in Sources */,
 				F1700E4A207AB29500C94225 /* PlayerNameNode.swift in Sources */,

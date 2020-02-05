@@ -15,8 +15,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let skView = self.view as! SKView
+        guard let skView = self.view as? SKView else {
+            return
+        }
+        
+        // Optimize drawing by ignoring the sort of nodes with the same Z-order.
         skView.ignoresSiblingOrder = true
+        
+        // Show or not some statistics.
         skView.showsFPS = true
         skView.showsNodeCount = true
     }

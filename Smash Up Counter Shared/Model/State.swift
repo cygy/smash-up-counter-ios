@@ -6,6 +6,17 @@
 //  Copyright © 2018 Cyril GY. All rights reserved.
 //
 
+/*
+ The enum state describes the different state of the application:
+    .none:                  undefined state of the application (must not be used, there is a problem if it used).
+    .initializing:          the initial application data is being initialized, the application can not be used yet.
+    .ready:                 the initial application data is initialized, the application can be used.
+    .settingUpPlayers:      the players must be defined.
+    .settingUpFactions:     the factions that must be played with must be selected.
+    .factionsDistributed:   the selected factions are distributed to the players and are being revealed.
+    .playing:               the players are playing, the scores can evolved.
+    .endGame:               the game is done, a winner is named.
+ */
 
 // MARK: - Definition
 

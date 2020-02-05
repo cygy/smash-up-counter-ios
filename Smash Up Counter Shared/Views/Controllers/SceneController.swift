@@ -1,5 +1,5 @@
 //
-//  SceneCoordinator.swift
+//  SceneController.swift
 //  Smash Up Counter iOS
 //
 //  Created by Cyril on 06/02/2018.
@@ -9,15 +9,21 @@
 import SpriteKit
 import RxSwift
 
+/*
+ The class SceneController defines the common properties for the scenes of the application.
+ Each SceneController object manages a Scene object.
+ 
+ A controller object knows the SKView object in which the SKScene are drawn, and its viewController.
+ */
 
 // MARK: - Definition
 
-class Coordinator {}
+class Controller {}
 
 
 // MARK: - Definition
 
-class SceneCoordinator<T: Scene>: Coordinator {
+class SceneController<T: Scene>: Controller {
     
     // MARK: - Properties
     

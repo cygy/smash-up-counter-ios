@@ -6,6 +6,12 @@
 //  Copyright © 2018 Cyril GY. All rights reserved.
 //
 
+/*
+ This class describes a faction.
+ A faction is a set of cards whih a player plays with.
+ A faction is uniquely created by its identifier, has a name and an image.
+ A faction can be selected or not to play with.
+ */
 
 // MARK: - Definition
 
