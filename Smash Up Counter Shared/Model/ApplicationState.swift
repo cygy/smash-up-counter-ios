@@ -62,7 +62,7 @@ extension ApplicationState {
     
     // Add a player with this name to the game.
     // A player is added if the maximum number of players is not reachedand if this player does not exist yet.
-    func addPlayer(name: String) {
+    func addPlayer(withName name: String) {
         guard self.players.value.count < ApplicationState.numberMaxOfPlayers && !self.players.value.contains(where: { $0.name == name }) else {
             return
         }
@@ -75,13 +75,13 @@ extension ApplicationState {
     }
     
     // Remove a player with this name from the game.
-    func removePlayer(name: String) {
+    func removePlayer(withName name: String) {
         let players = self.players.value.filter { $0.name != name }
         self.players.accept(players)
     }
        
     // The score of a player with this name is incremented by 1.
-    func increment(score points: Int, forPlayer name: String) {
+    func incrementScore(by points: Int, forPlayer name: String) {
         let players = self.players.value.map { (p) -> Player in
             guard p.name == name else {
                 return p
@@ -94,7 +94,7 @@ extension ApplicationState {
 
     // The score of a player with this name is decremented by 1.
     // The score can not be lower than 0.
-    func decrement(score points: Int, forPlayer name: String) {
+    func decrementScore(by points: Int, forPlayer name: String) {
         let players = self.players.value.map { (p) -> Player in
             guard p.name == name else {
                 return p
@@ -114,20 +114,20 @@ extension ApplicationState {
     
     // Select an add-on to add its factions to the list.
     // The players will play with factions from this list.
-    func select(addOn addOnId: Int) {
-        let addOns = self.update(addOn: addOnId, fromAddOns: self.addOns.value, isSelected: true)
+    func selectAddOn(withId addOnId: Int) {
+        let addOns = self.updateAddOn(withId: addOnId, fromAddOns: self.addOns.value, isSelected: true)
         self.addOns.accept(addOns)
     }
     
     // Unselect an add-on to remove its factions from the list.
     // The players will play with factions from this list.
-    func unselect(addOn addOnId: Int) {
-        let addOns = self.update(addOn: addOnId, fromAddOns: self.addOns.value, isSelected: false)
+    func unselectAddOn(withId addOnId: Int) {
+        let addOns = self.updateAddOn(withId: addOnId, fromAddOns: self.addOns.value, isSelected: false)
         self.addOns.accept(addOns)
     }
     
     // Private method to update an add-on and its faction.
-    private func update(addOn addOnId: Int, fromAddOns addOns: [AddOn], isSelected selected: Bool) -> [AddOn] {
+    private func updateAddOn(withId addOnId: Int, fromAddOns addOns: [AddOn], isSelected selected: Bool) -> [AddOn] {
         return addOns.map { (a) -> AddOn in
             guard a.id == addOnId else {
                 return a
@@ -147,20 +147,20 @@ extension ApplicationState {
     
     // Select a faction from an add-on to add it to the list.
     // The players will play with factions from this list.
-    func select(faction factionId: Int, fromAddOn addOnId: Int) {
-        let addOns = self.update(faction: factionId, fromAddOn: addOnId, andFromAddOns: self.addOns.value, isSelected: true)
+    func selectFaction(withId factionId: Int, fromAddOn addOnId: Int) {
+        let addOns = self.updateFaction(withId: factionId, fromAddOn: addOnId, andFromAddOns: self.addOns.value, isSelected: true)
         self.addOns.accept(addOns)
     }
     
     // Unelect a faction from an add-on to remove it from the list.
     // The players will play with factions from this list.
-    func unselect(faction factionId: Int, fromAddOn addOnId: Int) {
-        let addOns = self.update(faction: factionId, fromAddOn: addOnId, andFromAddOns: self.addOns.value, isSelected: false)
+    func unselectFaction(withId factionId: Int, fromAddOn addOnId: Int) {
+        let addOns = self.updateFaction(withId: factionId, fromAddOn: addOnId, andFromAddOns: self.addOns.value, isSelected: false)
         self.addOns.accept(addOns)
     }
     
     // Private method to update a faction.
-    private func update(faction factionId: Int, fromAddOn addOnId: Int, andFromAddOns addOns: [AddOn], isSelected selected: Bool) -> [AddOn] {
+    private func updateFaction(withId factionId: Int, fromAddOn addOnId: Int, andFromAddOns addOns: [AddOn], isSelected selected: Bool) -> [AddOn] {
         return addOns.map { (a) -> AddOn in
             guard a.id == addOnId else {
                 return a

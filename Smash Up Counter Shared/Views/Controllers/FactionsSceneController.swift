@@ -18,6 +18,10 @@ import SpriteKit
 // MARK: - Protocol (FactionsSceneControllerDelegate)
 
 protocol FactionsSceneControllerDelegate: class {
+    func selectAddOn(withId addOnId: Int, from controller: FactionsSceneController)
+    func unselectAddOn(withId addOnId: Int, from controller: FactionsSceneController)
+    func selectFaction(withId factionId: Int, fromAddOn addOnId: Int, from controller: FactionsSceneController)
+    func unselectFaction(withId factionId: Int, fromAddOn addOnId: Int, from controller: FactionsSceneController)
     func nextStep(from controller: FactionsSceneController)
     func previousStep(from controller: FactionsSceneController)
 }
@@ -68,9 +72,9 @@ class FactionsSceneController: SceneController<FactionsScene> {
         let faction = addOn.factions[index]
         
         if selected {
-            ApplicationState.instance.select(faction: faction.id, fromAddOn: addOn.id)
+            self.delegate?.selectFaction(withId: faction.id, fromAddOn: addOn.id, from: self)
         } else {
-            ApplicationState.instance.unselect(faction: faction.id, fromAddOn: addOn.id)
+            self.delegate?.unselectFaction(withId: faction.id, fromAddOn: addOn.id, from: self)
         }
     }
     
@@ -83,9 +87,9 @@ class FactionsSceneController: SceneController<FactionsScene> {
         let addOn = addOns[index]
         
         if selected {
-            ApplicationState.instance.select(addOn: addOn.id)
+            self.delegate?.selectAddOn(withId: addOn.id, from: self)
         } else {
-            ApplicationState.instance.unselect(addOn: addOn.id)
+            self.delegate?.unselectAddOn(withId: addOn.id, from: self)
         }
     }
 }

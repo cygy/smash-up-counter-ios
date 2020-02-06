@@ -17,6 +17,8 @@ import SpriteKit
 // MARK: - Protocol (PlayersSceneControllerDelegate)
 
 protocol PlayersSceneControllerDelegate: class {
+    func addPlayer(withName name: String, from controller: PlayersSceneController)
+    func removePlayer(withName name: String, from controller: PlayersSceneController)
     func nextStep(from controller: PlayersSceneController)
 }
 
@@ -82,14 +84,14 @@ extension PlayersSceneController: PlayersSceneDelegate {
             guard let playerName = input.textFields?[0].text, playerName.count > 0 else {
                 return
             }
-            ApplicationState.instance.addPlayer(name: playerName)
+            self.delegate?.addPlayer(withName: playerName, from: self)
         })
         
         self.viewController.present(input, animated: true, completion: nil)
     }
     
     func removePlayer(with name: String, from scene: PlayersScene) {
-        ApplicationState.instance.removePlayer(name: name)
+        self.delegate?.removePlayer(withName: name, from: self)
     }
 }
 

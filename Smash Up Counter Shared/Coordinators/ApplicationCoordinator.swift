@@ -153,6 +153,14 @@ extension ApplicationCoordinator: HomeSceneControllerDelegate {
 // MARK: - Extension (PlayersCoordinatorDelegate)
 
 extension ApplicationCoordinator: PlayersSceneControllerDelegate {
+    func addPlayer(withName name: String, from controller: PlayersSceneController) {
+        ApplicationState.instance.addPlayer(withName: name)
+    }
+    
+    func removePlayer(withName name: String, from controller: PlayersSceneController) {
+        ApplicationState.instance.removePlayer(withName: name)
+    }
+    
     func nextStep(from controller: PlayersSceneController) {
         ApplicationState.instance.setUpFactions()
     }
@@ -162,6 +170,22 @@ extension ApplicationCoordinator: PlayersSceneControllerDelegate {
 // MARK: - Extension (FactionsCoordinatorDelegate)
 
 extension ApplicationCoordinator: FactionsSceneControllerDelegate {
+    func selectAddOn(withId addOnId: Int, from controller: FactionsSceneController) {
+        ApplicationState.instance.selectAddOn(withId: addOnId)
+    }
+    
+    func unselectAddOn(withId addOnId: Int, from controller: FactionsSceneController) {
+        ApplicationState.instance.unselectAddOn(withId: addOnId)
+    }
+    
+    func selectFaction(withId factionId: Int, fromAddOn addOnId: Int, from controller: FactionsSceneController) {
+        ApplicationState.instance.selectFaction(withId: factionId, fromAddOn: addOnId)
+    }
+    
+    func unselectFaction(withId factionId: Int, fromAddOn addOnId: Int, from controller: FactionsSceneController) {
+        ApplicationState.instance.unselectFaction(withId: factionId, fromAddOn: addOnId)
+    }
+    
     func nextStep(from controller: FactionsSceneController) {
         ApplicationState.instance.distributeFactions()
     }
@@ -184,6 +208,14 @@ extension ApplicationCoordinator: FactionsDistributionSceneControllerDelegate {
 // MARK: - Extension (GameCoordinatorDelegate)
 
 extension ApplicationCoordinator: GameSceneControllerDelegate {
+    func incrementScore(by points: Int, forPlayer name: String, from controller: GameSceneController) {
+        ApplicationState.instance.incrementScore(by: points, forPlayer: name)
+    }
+    
+    func decrementScore(by points: Int, forPlayer name: String, from controller: GameSceneController) {
+        ApplicationState.instance.decrementScore(by: points, forPlayer: name)
+    }
+    
     func endGame(from controller: GameSceneController) {
         ApplicationState.instance.endGame()
     }

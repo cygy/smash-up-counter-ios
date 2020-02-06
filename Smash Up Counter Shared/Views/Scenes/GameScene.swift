@@ -12,8 +12,8 @@ import SpriteKit
 // MARK: - Protocol (GameSceneDelegate)
 
 protocol GameSceneDelegate: class {
-    func incrementScoreBy(points: Int, ofPlayer name: String)
-    func decrementScoreBy(points: Int, ofPlayer name: String)
+    func incrementScore(by points: Int, forPlayer name: String, from scene: GameScene)
+    func decrementScore(by points: Int, forPlayer name: String, from scene: GameScene)
     func endGame(from scene: GameScene)
 }
 
@@ -129,11 +129,11 @@ class GameScene: Scene {
     // MARK: - Events
     
     fileprivate func didSelectIncrementScoreBy(points: Int, ofPlayer name: String) {
-        self.sceneDelegate?.incrementScoreBy(points: points, ofPlayer: name)
+        self.sceneDelegate?.incrementScore(by: points, forPlayer: name, from: self)
     }
     
     fileprivate func didSelectDecrementScoreBy(points: Int, ofPlayer name: String) {
-        self.sceneDelegate?.decrementScoreBy(points: points, ofPlayer: name)
+        self.sceneDelegate?.decrementScore(by: points, forPlayer: name, from: self)
     }
     
     fileprivate func didSelectEndGame() {

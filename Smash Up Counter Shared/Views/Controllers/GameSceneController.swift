@@ -16,6 +16,8 @@ import SpriteKit
 // MARK: - Protocol (GameSceneControllerDelegate)
 
 protocol GameSceneControllerDelegate: class {
+    func incrementScore(by points: Int, forPlayer name: String, from controller: GameSceneController)
+    func decrementScore(by points: Int, forPlayer name: String, from controller: GameSceneController)
     func endGame(from controller: GameSceneController)
 }
 
@@ -64,11 +66,11 @@ extension GameSceneController: GameSceneDelegate {
         }
     }
     
-    func incrementScoreBy(points: Int, ofPlayer name: String) {
-        ApplicationState.instance.increment(score: points, forPlayer: name)
+    func incrementScore(by points: Int, forPlayer name: String, from scene: GameScene) {
+        self.delegate?.incrementScore(by: points, forPlayer: name, from: self)
     }
     
-    func decrementScoreBy(points: Int, ofPlayer name: String) {
-        ApplicationState.instance.decrement(score: points, forPlayer: name)
+    func decrementScore(by points: Int, forPlayer name: String, from scene: GameScene) {
+        self.delegate?.decrementScore(by: points, forPlayer: name, from: self)
     }
 }
