@@ -12,8 +12,8 @@ All the names, images could be copyrighted by the owner of Smash Up.
 
 ## Requirements
 
-Xcode 11.3
-Swift 5
+- Xcode 11.3
+- Swift 5
 
 ## Installation
 
