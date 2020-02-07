@@ -10,6 +10,15 @@ This source code is for **purposal only** and it is intended to be distributed o
 
 All the names, images could be copyrighted by the owner of Smash Up.
 
+## Requirements
+
+Xcode 11.3
+Swift 5
+
+## Installation
+
+`carthage update`
+
 ## What is Smash Up?
 
 > *Smash Up, designed by Paul Peterson, is the all-new Shufflebuilding game from Alderac Entertainment Group.  In Smash Up players take two factions, such as pirates, ninja, robots, zombies, and more, and combine their decks into a force to be reckoned with!*
@@ -48,15 +57,15 @@ The screen flow is pretty straightforward:
 
 ![Diagram](Documentation/documentation-diagram.png?raw=true "Smash Up Counter Diagram")
 
-This simple application is structured around two **singletons**: the **ApplicationState** and the **ApplicationCoordinator**.
+This simple application is structured around two **singletons**: the `ApplicationState` and the `ApplicationCoordinator` objects.
 
-The **ApplicationState** owns the entire state of the application. The other objects must refer to it to know the state of the application. The **RxSwift** framework is used here to allow the other objects to subscribe to the properties of the **ApplicationState** object and to receive the updates.
+The `ApplicationState` singleton owns the entire state of the application. The other objects must refer to it to know the state of the application. The **RxSwift** framework is used here to allow the other objects to subscribe to the properties of the `ApplicationState` singleton and to receive the updates.
 
-The **ApplicationCoordinator** uses the **coordinator pattern** to manage and to display the different scenes on the screen. It observes the updates of **ApplicationState** state property, and updates the scenes accordingly.
+The `ApplicationCoordinator` singleton uses the **coordinator pattern** to manage and to display the different scenes on the screen. It observes the updates of `ApplicationState` singleton's state property, and updates the scenes accordingly.
 It is the only object allowed to update the state of the application.
 
-The **SceneController** objects manage and update the scenes currently displayed on the screen. These controllers could be considered as coordinators but because they manage a scene they are considered as controllers like the **UIViewController** classes from the **UIKit** framework.
-These controllers forward the actions from the scenes (the UI) to the **ApplicationCoordinator** thanks to the **delegate pattern**.
+The `SceneController` objects manage and update the scenes currently displayed on the screen. These controllers could be considered as coordinators but because they manage a scene they are considered as controllers like the `UIViewController` classes from the **UIKit** framework.
+These controllers forward the actions from the scenes (the UI) to the `ApplicationCoordinator` singleton thanks to the **delegate pattern**.
 
 ### Links
 
@@ -71,7 +80,7 @@ The model of the application is composed by simple structs and objects.
 
 ### State
 
-The *State* enum represents the current state of the application. Each value of this enum has a corresponding scene, screen.
+The *State* represents the current state of the application. Each value of this enum has a corresponding scene, screen.
 
 ### Player
 
@@ -87,16 +96,16 @@ A *Faction* is represented by its identifier, its name, its image and if it sele
 
 ## Application state
 
-The ApplicationState object (a singleton) contains the state of the entire application, it represents the single source of truth. Any object can subscribe to its property to be up-to-dated and to respond accordingly. Its property must be updated via the corresponding methods.
+The `ApplicationState` singleton contains the state of the entire application, it represents the single source of truth. Any object can subscribe to its property to be up-to-dated and to respond accordingly. Its property must be updated via the corresponding methods.
 
 ## Scenes
 
-A scene object is a dumb object: it only does and displays things that its scene controller tells it. A scene doesn't know anything about the application, it only manages its SKNodes. A scene object forwards the actions that it receives by the user to its delegate.
+A `Scene` object is a dumb object: it only does and displays things that its `SceneController` object tells it. A scene doesn't know anything about the application, it only manages its SKNodes. A scene object forwards the actions that it receives by the user to its delegate.
 
 ## Scene controllers
 
-A scene controller is the link between the application state and the scene object that it manages. The controller gives its scene object the data that it needs. A controller observes the application state to update accordingly its scene. A controller is the delegate of its scene object to apply the actions passed by the user.
+A `SceneController` object is the link between the `ApplicationState` singleton and the `Scene` object that it manages. The controller gives its scene the data that it needs. A controller observes the application state to update accordingly its scene. A controller is the delegate of its scene in order to apply the actions passed by the user.
 
 ## Application Coordinator
 
-The application coordinator manages the different scene controllers, it observes the application state and displays accordingly the right scene controller. The application coordinator is the delegate of each sceen controller and updates the application state consequently.
+The `ApplicationCoordinator` singleton manages the different scene controllers, it observes the application state and displays accordingly the right scene controller. The application coordinator is the delegate of each sceen controller and updates the application state consequently.
